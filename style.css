@@ -1,4 +1,4 @@
-/* GENERAL */
+
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
@@ -60,7 +60,7 @@ a:hover {
 
 .logo {
   font-size: 2rem;
-  text-align: left;
+  text-align: justify;
 }
 
 .logo:hover {
@@ -345,7 +345,7 @@ section {
 
 article {
   display: flex;
-  width: 10rem;
+  width: 12rem;
   justify-content: space-around;
   gap: 0.5rem;
 }
@@ -430,4 +430,69 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+  display: inline-flex;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: block;
+  background: #b1dae7;
+  width: 10px;  /* Small dot */
+  height: 10px;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.cta:hover:before {
+  width: 100%;  /* Expands to cover the button */
+  border-radius: 50px; /* Changes shape to a full button cover */
+}
+
+.cta span {
+  position: relative;
+  z-index: 1;
+}
+
+.cta svg {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
 }
